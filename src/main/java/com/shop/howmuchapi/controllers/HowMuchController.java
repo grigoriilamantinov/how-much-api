@@ -2,26 +2,26 @@ package com.shop.howmuchapi.controllers;
 
 import com.shop.howmuchapi.dto.CalculatedCart;
 import com.shop.howmuchapi.dto.Cart;
-import com.shop.howmuchapi.services.ServiceLayer;
+import com.shop.howmuchapi.services.HowMuchService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/api/carts")
 public class HowMuchController {
-    private ServiceLayer serviceLayer;
+    private HowMuchService serviceLayer;
 
     public HowMuchController(
-        @Autowired final ServiceLayer serviceLayer
+        @Autowired final HowMuchService serviceLayer
     ) {
         this.serviceLayer = serviceLayer;
     }
 
-    @GetMapping()
-    public CalculatedCart getCalculatedCart (@PathVariable final Cart cart) {
+    @PutMapping()
+    public CalculatedCart getCalculatedCart (@RequestBody final Cart cart) {
         return serviceLayer.getCalculatedCart(cart);
     }
 }

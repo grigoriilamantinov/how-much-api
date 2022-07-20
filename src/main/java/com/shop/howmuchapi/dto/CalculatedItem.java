@@ -10,7 +10,7 @@ public class CalculatedItem extends Item {
     public CalculatedItem() {
     }
 
-    public static CalculatedItem of(Item item) {
+    public static CalculatedItem of(final Item item) {
         CalculatedItem calculatedItem = new CalculatedItem();
         RequestToShopDatabase request = new RequestToShopDatabase();
 
