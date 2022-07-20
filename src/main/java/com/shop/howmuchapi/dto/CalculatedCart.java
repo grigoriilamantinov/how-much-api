@@ -15,6 +15,7 @@ public class CalculatedCart {
     public CalculatedCart() {
     }
 
+
     public List<CalculatedItem> getCalculatedItems() {
         return calculatedItems;
     }

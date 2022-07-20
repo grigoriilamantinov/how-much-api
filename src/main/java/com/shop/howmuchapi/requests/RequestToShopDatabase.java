@@ -7,14 +7,17 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Objects;
 
 @Component
-public class RequestToShopDatabase {
+public class RequestToShopDatabase implements Request {
 
     @Value("${URL_TO_SHOP_DB}")
-    private String URL;
+    private String PART_URL;
 
-    public float getCost() {
-        RestTemplate restTemplate = new RestTemplate();
-        final var responseEntity = restTemplate.getForEntity(URL, float.class);
-        return Objects.requireNonNull(responseEntity.getBody());
+    @Override
+    public float getCost(final int id) {
+//        final String FULL_URL = PART_URL + id;
+//        RestTemplate restTemplate = new RestTemplate();
+//        final var responseEntity = restTemplate.getForEntity(FULL_URL, float.class);
+//        return Objects.requireNonNull(responseEntity.getBody());
+        return 10;
     }
 }
