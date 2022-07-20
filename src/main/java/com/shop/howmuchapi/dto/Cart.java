@@ -14,9 +14,6 @@ public class Cart {
         this.addressId = addressId;
     }
 
-    public Cart() {
-    }
-
     public List<Item> getItems() {
         return items;
     }

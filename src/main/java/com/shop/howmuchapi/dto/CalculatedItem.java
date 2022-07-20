@@ -1,10 +1,6 @@
 package com.shop.howmuchapi.dto;
 
-import com.shop.howmuchapi.requests.Request;
 import com.shop.howmuchapi.requests.RequestToShopDatabase;
-import com.shop.howmuchapi.services.ServiceLayer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
@@ -48,8 +44,8 @@ public class CalculatedItem extends Item {
 
     @Override
     public String toString() {
-        return "CalculatedItem: " +
-            "thisItemSum=" + thisItemSum +
+        return "CalculatedItem: " + "Id: " + super.getId() +
+            " thisItemSum=" + thisItemSum +
             '}';
     }
 }

@@ -15,7 +15,7 @@ public class HowMuchController {
     private ServiceLayer serviceLayer;
 
     public HowMuchController(
-        @Autowired ServiceLayer serviceLayer
+        @Autowired final ServiceLayer serviceLayer
     ) {
         this.serviceLayer = serviceLayer;
     }

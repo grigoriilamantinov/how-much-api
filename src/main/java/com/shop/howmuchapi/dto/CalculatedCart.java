@@ -12,10 +12,6 @@ public class CalculatedCart {
         this.totalAmount = totalAmount;
     }
 
-    public CalculatedCart() {
-    }
-
-
     public List<CalculatedItem> getCalculatedItems() {
         return calculatedItems;
     }
