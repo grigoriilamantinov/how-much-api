@@ -21,7 +21,7 @@ public class HowMuchController {
     }
 
     @PutMapping()
-    public CalculatedCart getCalculatedCart (@RequestBody final Cart cart) {
+    public CalculatedCart calculateCart (@RequestBody final Cart cart) {
         return serviceLayer.getCalculatedCart(cart);
     }
 }
